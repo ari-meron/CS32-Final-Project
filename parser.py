@@ -62,7 +62,55 @@ def load_people():
         reader = csv.DictReader(f)
 
         for row in reader:
+
+            # Creating dictionaries for Person attributes
+            pre_college_experience = {}
+            im_experience = {}
+
+            # Getting experience:
+
+            if row['pre_college_sport_1'] != '':
+                sport = row['pre_college_sport_1']
+                experience = row['pre_college_sport_1_level']
+                rating = row['pre_college_sport_1_skill']
+                pre_college_experience[sport] = {
+                    'experience': experience
+                    'rating': rating
+                }
+            if row['pre_college_sport_2'] != '':
+                sport = row['pre_college_sport_2']
+                experience = row['pre_college_sport_2_level']
+                rating = row['pre_college_sport_2_skill']
+                pre_college_experience[sport] = {
+                    'experience': experience
+                    'rating': rating
+                }
+            if row['pre_college_sport_3'] != '':
+                sport = row['pre_college_sport_3']
+                experience = row['pre_college_sport_3_level']
+                rating = row['pre_college_sport_3_skill']
+                pre_college_experience[sport] = {
+                    'experience': experience
+                    'rating': rating
+                }
+            if row['im_badminton_experience'] != 'Never played':
+                sport = 'badminton'
+                experience = row['im_badminton_experience']
+                rating = row['im_badminton_skill']
+                im_experience[sport] = {
+                    'experience': experience
+                    'rating': rating
+                }
+            if row['im_basketball_experience'] != 'Never played':
+                sport = 'basketball'
+                experience = row['im_basketball_experience']
+                rating = row['im_basketball_skill']
+                im_experience[sport] = {
+                    'experience': experience
+                    'rating': rating
+                }
             
+
 
 
 
