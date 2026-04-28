@@ -13,11 +13,16 @@ class Person():
             return True
         return False
 
-    def experience_with(self, sport):
+   def pre_college_experience_with(self, sport):
         if sport in self.pre_college_experience:
-            pre_college =  (self.pre_college_experience[sport]['experience'], self.pre_college_experience[sport]['rating'])
-        elif sport in self.im_experience:
-            im = (self.im_experience[sport]['experience'], self.im_experience[sport]['rating'])
-        if pre_college not empty and im not empty:
-            return f'Pre-College: {pre_college}, IM: {im}'
-        return 'No Experience'
+            pre_college = (self.pre_college_experience[sport]['experience'],
+                           self.pre_college_experience[sport]['rating'])
+            return pre_college
+        return None
+
+    def im_experience_with(self, sport):
+        if sport in self.im_experience:
+            im = (self.im_experience[sport]['experience'],
+                  self.im_experience[sport]['rating'])
+            return im
+        return None
