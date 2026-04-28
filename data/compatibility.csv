@@ -1,0 +1,92 @@
+sport_a,sport_b,tier
+Badminton,Baseball,somewhat
+Badminton,Lacrosse,somewhat
+Badminton,Pickleball,very
+Badminton,Ping Pong,very
+Badminton,Softball,somewhat
+Badminton,Squash,very
+Badminton,Tennis,very
+Badminton,Volleyball,somewhat
+Basketball,Football (American),somewhat
+Basketball,Gymnastics,somewhat
+Basketball,Spikeball,somewhat
+Basketball,Track & Field,somewhat
+Basketball,Ultimate Frisbee,somewhat
+Basketball,Volleyball,very
+Basketball,Water Polo,somewhat
+Billiards,Foosball,somewhat
+Broomball,Baseball,somewhat
+Broomball,Field Hockey,very
+Broomball,Gymnastics,somewhat
+Broomball,Ice Hockey,very
+Broomball,Soccer,somewhat
+Broomball,Track & Field,somewhat
+Broomball,Water Polo,somewhat
+Climbing,Baseball,somewhat
+Climbing,Cheerleading / Dance,somewhat
+Climbing,Crew,somewhat
+Climbing,Gymnastics,very
+Climbing,Squash,somewhat
+Climbing,Swimming,somewhat
+Climbing,Volleyball,somewhat
+Climbing,Water Polo,somewhat
+Climbing,Wrestling,somewhat
+Dodgeball,Baseball,very
+Dodgeball,Flag Football,somewhat
+Dodgeball,Football (American),somewhat
+Dodgeball,Inner Tube Water Polo,very
+Dodgeball,Softball,very
+Dodgeball,Ultimate Frisbee,somewhat
+Dodgeball,Water Polo,very
+Flag Football,Baseball,somewhat
+Flag Football,Cross Country,somewhat
+Flag Football,Football (American),very
+Flag Football,Lacrosse,somewhat
+Flag Football,Rugby,very
+Flag Football,Track & Field,very
+Flag Football,Ultimate Frisbee,very
+Flag Football,Volleyball,somewhat
+Flag Football,Water Polo,somewhat
+Foosball,Ping Pong,somewhat
+Inner Tube Water Polo,Baseball,very
+Inner Tube Water Polo,Football (American),somewhat
+Inner Tube Water Polo,Lacrosse,somewhat
+Inner Tube Water Polo,Softball,somewhat
+Inner Tube Water Polo,Swimming,very
+Inner Tube Water Polo,Ultimate Frisbee,somewhat
+Inner Tube Water Polo,Volleyball,somewhat
+Inner Tube Water Polo,Water Polo,very
+Pickleball,Ping Pong,very
+Pickleball,Squash,very
+Pickleball,Tennis,very
+Ping Pong,Squash,very
+Ping Pong,Tennis,very
+River Run,Cross Country,very
+River Run,Football (American),somewhat
+River Run,Rugby,somewhat
+River Run,Swimming,somewhat
+River Run,Tennis,somewhat
+River Run,Track & Field,very
+Soccer,Ice Hockey,somewhat
+Soccer,Track & Field,somewhat
+Soccer,Ultimate Frisbee,somewhat
+Softball,Baseball,very
+Softball,Lacrosse,somewhat
+Softball,Squash,somewhat
+Softball,Tennis,somewhat
+Softball,Water Polo,somewhat
+Spikeball,Squash,somewhat
+Spikeball,Volleyball,very
+Squash,Tennis,very
+Tennis,Baseball,somewhat
+Tennis,Lacrosse,somewhat
+Tennis,Volleyball,somewhat
+Ultimate Frisbee,Cross Country,somewhat
+Ultimate Frisbee,Field Hockey,somewhat
+Ultimate Frisbee,Football (American),somewhat
+Ultimate Frisbee,Lacrosse,somewhat
+Ultimate Frisbee,Rugby,somewhat
+Ultimate Frisbee,Track & Field,somewhat
+Volleyball,Cheerleading / Dance,somewhat
+Volleyball,Gymnastics,somewhat
+Volleyball,Water Polo,somewhat
