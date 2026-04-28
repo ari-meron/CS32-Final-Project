@@ -75,4 +75,17 @@ The people dictionary is a dictionary that contains entries for people and corre
 
 ### scorer.py
 
+A python file that contains the following functions:
+
+- score()
+- build_team()
+
+The score function takes parameters person and target_sport and then outputs a numerical score for that person (higher score means that the person should be included in the team, lower score means they shouldn't) based on the compatibility of the person's sports experience with that sport
+
+The build_team() function takes the target_sport parameter, and then outputs a set of people who should make up the team for that sport
+
+### main.py
+
+The main.py file contains a main function that takes user input as to what sport they want to build a team for, then it outputs a team for that sport.
+
 
