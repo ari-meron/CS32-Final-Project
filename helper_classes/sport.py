@@ -12,7 +12,7 @@ class Sport():
             return "very"
         elif sport in self.somewhat_compatible:
             return "somewhat"
-        else
+        else:
             return "not"
 
 

@@ -56,5 +56,13 @@ def load_sports():
 
 
 def load_people():
-    
+
+    # Opening the people.csv file
+    with open("data/people.csv", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+
+        for row in reader:
+            
+
+
 
