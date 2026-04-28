@@ -15,7 +15,9 @@ class Person():
 
     def experience_with(self, sport):
         if sport in self.pre_college_experience:
-            return (self.pre_college_experience[sport]['experience'], self.pre_college_experience[sport]['rating'])
+            pre_college =  (self.pre_college_experience[sport]['experience'], self.pre_college_experience[sport]['rating'])
         elif sport in self.im_experience:
-            return(self.im_experience[sport]['experience'], self.im_experience[sport]['rating'])
+            im = (self.im_experience[sport]['experience'], self.im_experience[sport]['rating'])
+        if pre_college not empty and im not empty:
+            return f'Pre-College: {pre_college}, IM: {im}'
         return 'No Experience'
