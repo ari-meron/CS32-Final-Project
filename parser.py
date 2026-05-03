@@ -1,5 +1,6 @@
 import csv
-from helper_classes/sport.py import Sport
+from helper_classes.sport import Sport
+from helper_classes.person import Person
 
 compatibility = {}
 sports = {}
