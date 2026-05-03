@@ -12,7 +12,7 @@ Our repo contains the following folders and files:
 We have a data folder that includes the files:
 
 - sports.csv
-- people.csv
+- responses.csv
 - compatibility.csv
 - generate_dummy_data.py
 
@@ -20,9 +20,9 @@ We have a data folder that includes the files:
 
 The sports.csv file is a csv file that contains a list of IM sports and the number of spots/players required to build a team
 
-### people.csv
+### responses.csv
 
-This file is a csv file that contains a list of people in Currier (or dummy observations to bolster the data). The people are the observations (rows in the csv), with columns variables being the sports those observations play, and their relative experience and skill level.
+This file is a .csv file that contains a list of residents' survey responses in Currier (or dummy responses to bolster the data). The people are the observations (rows in the csv), with columns variables being the sports those observations play, and their relative experience and skill level.
 
 ### compatibility.csv
 
@@ -31,7 +31,6 @@ A csv file that contains information on how compatible the skills from different
 ### generate_dummy_data.py
 
 A function that generates realistic dummy data points to increase the size of our data file for testing.
-
 
 ## helper_classes
 
@@ -42,7 +41,7 @@ The helper_classes folder contains two files:
 
 ### person.py
 
-A python file that defines the Person class. The Person class will have the attributes: varsity (the person's varisty sport if they have one), and then pre_college_experience, and im_experience which are both dictionaries with their sports and levels of experience and skill.
+A python file that defines the Person class. The Person class will have the attributes: name, varsity (the person's varsity sport if they play one), and then pre_college_experience and im_experience which are both dictionaries with their sports and levels of experience and skill.
 
 This file will also contain functions to get the experience of a Person with some input sport.
 
@@ -55,7 +54,7 @@ A python file that defines the Sport class. The Sport class will have the attrib
 - very_compatible: (set) set of sports that sport is very compatible with
 - somewhat_compatible: (set) set of sports that sport is somewhat compatible with
 
-The Sport class will also have the function compatibility_tier(other_sport) which will find how compatible other_sport is with the sport the Sport class object has.
+The Sport class will also have the function get_tier(sport) which will find how compatible an input sport is is with the sport the Sport class object represents; get_tier returns "very", "somewhat", or "not".
 
 ## Other Files
 
@@ -67,7 +66,7 @@ Outside of these two folder there are 3 python files in our repository:
 
 ### parser.py
 
-A python file that contains the methods load_compatibility(), load_sports() and load_people(). The functions take data from the sports.csv, compatibility.csv, and people.csv files, to build the compatibility, sports and people dictionaries.
+A python file that contains the methods load_compatibility(), load_sports() and load_people(). The functions take data from the sports.csv, compatibility.csv, and responses.csv files, to build the compatibility, sports and people dictionaries.
 
 The compatibility dictionary is a dictionary that contains all sports with sets of sports that are very or somewhat compatible with that sport
 
