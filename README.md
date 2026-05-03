@@ -3,8 +3,6 @@ Ari and Cotton's CS32 FP
 
 Our vision is to revolutionize the system used to direct Currier's IM sports teams. We aim to build an algorithm to help put together team lineups for Currier IM sports. Currier has great engagement in IM sports, which is great, but comes at the cost of having to make decisions on lineups. We want to build a system that will take data on each person's sports experience and skills, and then build an algorithm that will take that input and spit out a team. 
 
-We are currently working on collecting data (see the google forms link to take a look at what our collection form looks like: https://docs.google.com/forms/d/e/1FAIpQLSe9Z3H5nqNsGBGjexu6MpprxUBiiFXFQrOFewkHqCBtRtTfFA/viewform?usp=publish-editor)
-
 # Project Structure
 
 Our repo contains the following folders and files:
@@ -44,7 +42,9 @@ The helper_classes folder contains two files:
 
 ### person.py
 
-A python file that defines the Person class. The Person class will have the attributes: varsity, outside_experience
+A python file that defines the Person class. The Person class will have the attributes: varsity (the person's varisty sport if they have one), and then pre_college_experience, and im_experience which are both dictionaries with their sports and levels of experience and skill.
+
+This file will also contain functions to get the experience of a Person with some input sport.
 
 ### sport.py
 
@@ -67,7 +67,9 @@ Outside of these two folder there are 3 python files in our repository:
 
 ### parser.py
 
-A python file that contains the methods load_sports() and load_people(). The functions take data from the sports.csv, compatibility.csv, and people.csv files, to build the sports and people dictionaries.
+A python file that contains the methods load_compatibility(), load_sports() and load_people(). The functions take data from the sports.csv, compatibility.csv, and people.csv files, to build the compatibility, sports and people dictionaries.
+
+The compatibility dictionary is a dictionary that contains all sports with sets of sports that are very or somewhat compatible with that sport
 
 The sports dictionary is a dictionary that contains entries for sports and corresponding Sport objects
 
