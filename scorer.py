@@ -22,7 +22,7 @@ def direct_score(person, target_sport):
 
     # Returning 0 for banned athletes
     if person.is_banned(target_sport):
-        return ()
+        return 0
 
     # Getting persons experience
     im = person.im_experience_with(target_sport)
@@ -43,6 +43,9 @@ def direct_score(person, target_sport):
     return direct_score
 
 def general_score(person, target_sport):
+
+    if person.is_banned:
+        return 0
 
     # Getting persons experience
     im = person.im_experience
