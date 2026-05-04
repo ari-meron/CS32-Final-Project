@@ -19,6 +19,7 @@ TIER_MULTIPLIERS = {
     "not":      0.0,
 }
 
+# Gets person's score based on direct experience with target_sport
 def get_direct_score(person, target_sport):
 
     # Returning 0 for banned athletes
@@ -43,6 +44,7 @@ def get_direct_score(person, target_sport):
 
     return direct_score
 
+# Gets score for non-direct experience with target_sport
 def get_general_score(person, target_sport):
 
     if person.is_banned(target_sport):
@@ -83,18 +85,22 @@ def get_general_score(person, target_sport):
 
             general_score += pre_skill * TIER_MULTIPLIERS[tier]
 
+    # Returning Addative Score
     return general_score
 
 
 def build_team(target_sport):
 
+    # Gets numbers we need
     target = sports[target_sport]
     n_starters = target.size
     n_subs = math.ceil(target.size / 2)
 
+    # Initializes return lists
     starters = []
     subs = []
 
+    # Initializes lists of all players depending on experience
     tier1 = []
     tier2 = []
 
@@ -103,15 +109,17 @@ def build_team(target_sport):
         direct_score = round(get_direct_score(person, target_sport), 2)
         general_score = round(get_general_score(person, target_sport), 2)
 
+        # Sort into tier 1 if the person has direct experience, tier 2 otherwise
         if direct_score != 0:
             tier1.append((person.name, direct_score, general_score))
         else:
             tier2. append((person.name, direct_score, general_score))
         
-    
+    # Sorting Tier 1 and Tier 2 based on direct and general score respectively
     sorted_tier1 = sorted(tier1, key=lambda x: x[1], reverse = True)
     sorted_tier2 = sorted(tier1, key=lambda x: x[2], reverse = True)
 
+    # Assign's people to team and subs in all different scenarios for number of people with direct experience
     if len(sorted_tier1) >= n_starters + n_subs:
         starters = sorted_tier1[:n_starters]
         subs = sorted_tier1[n_starters:n_starters + n_subs]
