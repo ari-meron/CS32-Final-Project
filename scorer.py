@@ -86,7 +86,7 @@ def build_team(target_sport):
 
     target = sports[target_sport]
     n_starters = target.size
-    n_subs = target.ceil(target.size / 2)
+    n_subs = math.ceil(target.size / 2)
 
     starters = []
     subs = []
