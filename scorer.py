@@ -61,12 +61,13 @@ def get_general_score(person, target_sport):
         if sport == target_sport:
             continue
         
-        tier = sports[target_sport].get_tier(sport)
+        tier = sports[sport].get_tier(target_sport)
 
-        im_skill = im[target_sport]['rating']
-        im_experience  = im[target_sport]['experience']
+        if sport in im:
+            im_skill = im[sport]['rating']
+            im_experience  = im[sport]['experience']
 
-        general_score += im_skill * IM_MULTIPLIERS[im_experience] * TIER_MULTIPLIERS[tier]
+            general_score += im_skill * IM_MULTIPLIERS[im_experience] * TIER_MULTIPLIERS[tier]
 
     # Getting total score for precollege
     for sport in pre_college:
@@ -76,9 +77,11 @@ def get_general_score(person, target_sport):
 
         tier = sports[target_sport].get_tier(sport)
 
-        pre_skill = pre_college[target_sport]['rating']
+        if sport in pre_college:
 
-        general_score += pre_skill * TIER_MULTIPLIERS[tier]
+            pre_skill = pre_college[sport]['rating']
+
+            general_score += pre_skill * TIER_MULTIPLIERS[tier]
 
     return general_score
 
@@ -95,9 +98,10 @@ def build_team(target_sport):
     tier1 = []
     tier2 = []
 
-    for person in people:
-        direct_score = get_direct_score(person, target)
-        general_score = get_general_score(person, target)
+    for name in people:
+        person = people[name]
+        direct_score = round(get_direct_score(person, target_sport), 2)
+        general_score = round(get_general_score(person, target_sport), 2)
 
         if direct_score != 0:
             tier1.append((person.name, direct_score, general_score))
@@ -105,8 +109,8 @@ def build_team(target_sport):
             tier2. append((person.name, direct_score, general_score))
         
     
-    sorted_tier1 = sorted(tier1, key=lambda x: x[1])
-    sorted_tier2 = sorted(tier1, key=lambda x: x[2])
+    sorted_tier1 = sorted(tier1, key=lambda x: x[1], reverse = True)
+    sorted_tier2 = sorted(tier1, key=lambda x: x[2], reverse = True)
 
     if len(sorted_tier1) >= n_starters + n_subs:
         starters = sorted_tier1[:n_starters]
