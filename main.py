@@ -9,12 +9,17 @@ def main():
     target_sport = input("What sport do you need a team for?: ")
     starters, subs = build_team(target_sport)
 
-    print('Starters:')
+    print("STARTERS:")
+    print(f"{'Name':<6} {'Direct Score':<15} {'General Score'}")
     for starter in starters:
-        print(f'Name: {starter[0]}, Direct Score: {starter[1]}, General Score: {starter[2]}')
-    print('Subs:')
+        print(f"{starter[0]:<6} {starter[1]:<15} {starter[2]}")
+
+    
+    print("\nSUBS:")
+    print(f"{'Name':<6} {'Direct Score':<15} {'General Score'}")
     for sub in subs:
-        print(f'Name: {sub[0]}, Direct Score: {sub[1]}, General Score: {sub[2]}')
+        print(f"{sub[0]:<6} {sub[1]:<15} {sub[2]}")
+
 
 
 if __name__ == '__main__':
