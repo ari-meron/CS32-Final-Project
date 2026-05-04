@@ -8,6 +8,10 @@ class Person():
         self.pre_college_experience = pre_college_experience
         self.im_experience = im_experience
 
+    def __str__(self):
+        ret_string = f'Name: {self.name} | Varsity: {self.varsity} | Pre-college: {self.pre_college_experience} | IM: {self.im_experience}'
+        return ret_string
+
     def is_banned(self, sport):
         if self.varsity == sport:
             return True

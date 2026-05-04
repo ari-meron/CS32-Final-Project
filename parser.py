@@ -141,3 +141,11 @@ def load_all():
     load_compatibility()
     load_sports()
     load_people()
+
+def main():
+    load_compatibility()
+    print(compatibility['Tennis']['very'])
+
+
+if __name__ == '__main__':
+    main()
