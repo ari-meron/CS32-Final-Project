@@ -1,3 +1,4 @@
+import math
 from helper_classes.person import Person
 from helper_classes.sport import Sport
 from parser import load_all, compatibility, sports, people
@@ -18,7 +19,7 @@ TIER_MULTIPLIERS = {
     "not":      0.0,
 }
 
-def direct_score(person, target_sport):
+def get_direct_score(person, target_sport):
 
     # Returning 0 for banned athletes
     if person.is_banned(target_sport):
@@ -42,9 +43,9 @@ def direct_score(person, target_sport):
 
     return direct_score
 
-def general_score(person, target_sport):
+def get_general_score(person, target_sport):
 
-    if person.is_banned:
+    if person.is_banned(target_sport):
         return 0
 
     # Getting persons experience
@@ -95,8 +96,8 @@ def build_team(target_sport):
     tier2 = []
 
     for person in people:
-        direct_score = direct_score(person, target_sport)
-        general_score = general_score(person, target_sport)
+        direct_score = get_direct_score(person, target)
+        general_score = get_general_score(person, target)
 
         if direct_score != 0:
             tier1.append((person.name, direct_score, general_score))

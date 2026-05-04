@@ -1,7 +1,7 @@
 from parser import load_all, compatibility, sports, people
 from helper_classes.sport import Sport
 from helper_classes.person import Person
-from scorer import direct_score, general_score, build_team
+from scorer import get_direct_score, get_general_score, build_team
 
 def main():
     load_all()
